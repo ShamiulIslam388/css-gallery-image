@@ -1,9 +1,3 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v7.0.29,
-* Autoprefixer: v9.7.6
-* Browsers: last 4 version
-*/
 
 * {
     margin: 0;
@@ -21,10 +15,14 @@ body {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr 16px 1fr 16px 1fr 16px 1fr 16px 1fr 16px 1fr 16px 1fr 16px 1fr 16px 1fr 16px 1fr 16px 1fr 16px 1fr;
-    grid-template-columns: repeat(12, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-auto-rows: 350px;
     margin: 40px 0;
     grid-gap: 16px;
+    grid-template-areas: 
+    "card-1 card-2 card-3 card-3"
+    "card-4 card-4 card-5 card-6"
+    "card-7 card-8 card-9 card-9";
 }
 
 .card__category {
@@ -90,6 +88,7 @@ body {
      rgba(10,10,10,0) 50%,
      rgba(10,10,10,0.7) 100%),
      url('images/img-1.jpg');
+     grid-area: card-1;
 }
 .card:nth-child(2) {
     background-image: -webkit-gradient(linear,
@@ -108,6 +107,7 @@ body {
      rgba(10,10,10,0) 50%,
      rgba(10,10,10,0.7) 100%),
      url('images/img-2.jpg');
+     grid-area: card-2;
 }
 .card:nth-child(3) {
     background-image: -webkit-gradient(linear,
@@ -126,6 +126,7 @@ body {
      rgba(10,10,10,0) 50%,
      rgba(10,10,10,0.7) 100%),
      url('images/img-3.jpg');
+     grid-area: card-3;
 }
 .card:nth-child(4) {
     background-image: -webkit-gradient(linear,
@@ -144,6 +145,7 @@ body {
      rgba(10,10,10,0) 50%,
      rgba(10,10,10,0.7) 100%),
      url('images/img-4.jpg');
+     grid-area: card-4;
 }
 .card:nth-child(5) {
     background-image: -webkit-gradient(linear,
@@ -162,6 +164,7 @@ body {
      rgba(10,10,10,0) 50%,
      rgba(10,10,10,0.7) 100%),
      url('images/img-5.jpg');
+     grid-area: card-5;
 }
 .card:nth-child(6) {
     background-image: -webkit-gradient(linear,
@@ -180,6 +183,7 @@ body {
      rgba(10,10,10,0) 50%,
      rgba(10,10,10,0.7) 100%),
      url('images/img-6.jpg');
+     grid-area: card-6;
 }
 .card:nth-child(7) {
     background-image: -webkit-gradient(linear,
@@ -198,6 +202,7 @@ body {
      rgba(10,10,10,0) 50%,
      rgba(10,10,10,0.7) 100%),
      url('images/img-7.jpg');
+     grid-area: card-7;
 }
 .card:nth-child(8) {
     background-image: -webkit-gradient(linear,
@@ -216,6 +221,7 @@ body {
      rgba(10,10,10,0) 50%,
      rgba(10,10,10,0.7) 100%),
      url('images/img-8.jpg');
+     grid-area: card-8;
 }
 .card:nth-child(9) {
     background-image: -webkit-gradient(linear,
@@ -234,28 +240,33 @@ body {
      rgba(10,10,10,0) 50%,
      rgba(10,10,10,0.7) 100%),
      url('images/img-9.jpg');
+     grid-area: card-9;
 }
 
-.card:nth-child(1),:nth-child(6),:nth-child(7) {
-    -ms-grid-column: span 6;
-        grid-column-start: span 6;
-}
 
-.card:nth-child(2),:nth-child(3),:nth-child(4),:nth-child(5),:nth-child(8),:nth-child(9) {
-    -ms-grid-column: span 3;
-        grid-column-start: span 3;
-}
 
 @media screen and (max-width: 1200px){
-    .card:nth-child(n) {
-        -ms-grid-column: span 6;
-            grid-column-start: span 6;
+    .feed {
+        grid-template-areas: 
+        "card-1 card-1 card-2 card-2"
+        "card-3 card-3 card-4 card-4"
+        "card-5 card-5 card-6 card-6"
+        "card-7 card-7 card-8 card-8"
+        "card-9 card-9 card-9 card-9";
     }
 }
 
 @media screen and (max-width: 800px){
-    .card:nth-child(n) {
-        -ms-grid-column: span 12;
-            grid-column-start: span 12;
+    .feed {
+        grid-template-areas: 
+        "card-1 card-1 card-1 card-1"
+        "card-2 card-2 card-2 card-2"
+        "card-3 card-3 card-3 card-3"
+        "card-4 card-4 card-4 card-4"
+        "card-5 card-5 card-5 card-5"
+        "card-6 card-6 card-6 card-6"
+        "card-7 card-7 card-7 card-7"
+        "card-8 card-8 card-8 card-8"
+        "card-9 card-9 card-9 card-9"
     }
 }
